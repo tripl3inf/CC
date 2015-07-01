@@ -1,0 +1,19 @@
+{
+  "name": "WordPlay-Theme",
+  "version": "0.2.0",
+  "homepage": "t3inf.com",
+  "authors": [
+    "Alex Aloia <tripl3infinity@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower"
+  ],
+  "dependencies": {
+    "respond": "1.4.2",
+    "bootstrap": "~3.3.0"
+  }
+}
