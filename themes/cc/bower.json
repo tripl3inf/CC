@@ -39,10 +39,11 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
     },
-    "startbootstrap-sb-admin-2": {
+    "fullpage.js": {
       "main": [
-        "./less/sb-admin-2.less",
-        "./dist/js/sb-admin-2.js"
+        "jquery.fullPage.js",
+        "./vendors/jquery.easings.min.js",
+        "./vendors/jquery.slimscroll.min.js"
       ]
     }
   }

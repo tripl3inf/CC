@@ -21,6 +21,17 @@
                 // JavaScript to be fired on all pages
 
 
+
+            },
+            finalize: function () {
+                // JavaScript to be fired on all pages, after page specific JS is fired
+            }
+        },
+        // Home page
+        'home': {
+            init: function () {
+                // JavaScript to be fired on the home page
+
                 $('#frontpage').fullpage({
                     //Navigation
                     menu: false,
@@ -52,19 +63,7 @@
                     //Custom selectors
                     sectionSelector: '.section',
                     slideSelector: '.slide',
-
                 });
-
-
-            },
-            finalize: function () {
-                // JavaScript to be fired on all pages, after page specific JS is fired
-            }
-        },
-        // Home page
-        'home': {
-            init: function () {
-                // JavaScript to be fired on the home page
 
             },
             finalize: function () {

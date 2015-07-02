@@ -19,7 +19,7 @@ $sage_includes = [
 	'lib/titles.php',                // Page titles
 	'lib/extras.php',                // Custom functions
 	'lib/woo-support.php',           // Add Woocommerce theme support
-//	'lib/DEV-ONLY.php'
+	'lib/DEV-ONLY.php'
 ];
 
 foreach ( $sage_includes as $file ) {
@@ -30,6 +30,7 @@ foreach ( $sage_includes as $file ) {
 	require_once $filepath;
 }
 unset( $file, $filepath );
+
 
 
 
