@@ -10,68 +10,106 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-(function($) {
+(function ($) {
 
-  // Use this variable to set up the common and page specific functions. If you
-  // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
-    // All pages
-    'common': {
-      init: function() {
-        // JavaScript to be fired on all pages
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
-      }
-    }
-  };
+    // Use this variable to set up the common and page specific functions. If you
+    // rename this variable, you will also need to rename the namespace below.
+    var Sage = {
+        // All pages
+        'common': {
+            init: function () {
+                // JavaScript to be fired on all pages
 
-  // The routing fires all common scripts, followed by the page specific scripts.
-  // Add additional events for more control over timing e.g. a finalize event
-  var UTIL = {
-    fire: function(func, funcname, args) {
-      var fire;
-      var namespace = Sage;
-      funcname = (funcname === undefined) ? 'init' : funcname;
-      fire = func !== '';
-      fire = fire && namespace[func];
-      fire = fire && typeof namespace[func][funcname] === 'function';
 
-      if (fire) {
-        namespace[func][funcname](args);
-      }
-    },
-    loadEvents: function() {
-      // Fire common init JS
-      UTIL.fire('common');
+                $('#frontpage').fullpage({
+                    //Navigation
+                    menu: false,
+                    lockAnchors: false,
+                    navigation: true,
+                    anchors: ['pane1', 'pane2', 'pane3'],
+                    navigationPosition: 'right',
+                    showActiveTooltip: true,
+                    navigationTooltips: ['First', 'Second', 'Third'],
 
-      // Fire page-specific init JS, and then finalize JS
-      $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
-        UTIL.fire(classnm);
-        UTIL.fire(classnm, 'finalize');
-      });
+                    //Scrolling
+                    css3: true,
+                    //scrollBar: false,
+                    easing: 'easeInOutCubic',
+                    easingcss3: 'ease',
+                    continuousVertical: false,
+                    scrollOverflow: false,
 
-      // Fire common finalize JS
-      UTIL.fire('common', 'finalize');
-    }
-  };
+                    //Design
+                    //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+                    controlArrows: true,
+                    resize: false,
+                    //paddingTop: '3em',
+                    //paddingBottom: '10px',
+                    //fixedElements: '#header, .footer',
+                    responsiveWidth: 0,
+                    responsiveHeight: 0,
 
-  // Load Events
-  $(document).ready(UTIL.loadEvents);
+                    //Custom selectors
+                    sectionSelector: '.section',
+                    slideSelector: '.slide',
+
+                });
+
+
+            },
+            finalize: function () {
+                // JavaScript to be fired on all pages, after page specific JS is fired
+            }
+        },
+        // Home page
+        'home': {
+            init: function () {
+                // JavaScript to be fired on the home page
+
+            },
+            finalize: function () {
+                // JavaScript to be fired on the home page, after the init JS
+            }
+        },
+        // About us page, note the change from about-us to about_us.
+        'about_us': {
+            init: function () {
+                // JavaScript to be fired on the about us page
+            }
+        }
+    };
+
+    // The routing fires all common scripts, followed by the page specific scripts.
+    // Add additional events for more control over timing e.g. a finalize event
+    var UTIL = {
+        fire: function (func, funcname, args) {
+            var fire;
+            var namespace = Sage;
+            funcname = (funcname === undefined) ? 'init' : funcname;
+            fire = func !== '';
+            fire = fire && namespace[func];
+            fire = fire && typeof namespace[func][funcname] === 'function';
+
+            if (fire) {
+                namespace[func][funcname](args);
+            }
+        },
+        loadEvents: function () {
+            // Fire common init JS
+            UTIL.fire('common');
+
+            // Fire page-specific init JS, and then finalize JS
+            $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function (i, classnm) {
+                UTIL.fire(classnm);
+                UTIL.fire(classnm, 'finalize');
+            });
+
+            // Fire common finalize JS
+            UTIL.fire('common', 'finalize');
+        }
+    };
+
+    // Load Events
+    $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.

@@ -15,6 +15,7 @@
         "wpackagist-plugin/simple-page-ordering": "*",
         "wpackagist-plugin/check-email": "*",
         "wpackagist-plugin/woocommerce": "*",
+        "wpackagist-plugin/woocommerce-twitterbootstrap": "*",
         "roots/soil": "~3.4"
     },
 

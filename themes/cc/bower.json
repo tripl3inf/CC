@@ -8,7 +8,10 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.5"
+    "bootstrap-sass-official": "3.3.5",
+    "startbootstrap-sb-admin-2": "~1.0.7",
+    "gsap": "~1.17.0",
+    "fullpage.js": "~2.6.6"
   },
   "overrides": {
     "modernizr": {
@@ -34,6 +37,12 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "startbootstrap-sb-admin-2": {
+      "main": [
+        "./less/sb-admin-2.less",
+        "./dist/js/sb-admin-2.js"
       ]
     }
   }

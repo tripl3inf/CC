@@ -3,7 +3,10 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic");
 
 @import "common/_global";
 @import "components/_buttons";
@@ -16,3 +19,4 @@
 @import "layouts/_footer";
 @import "layouts/_pages";
 @import "layouts/_posts";
+@import "layouts/_frontpage";

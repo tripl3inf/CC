@@ -1,0 +1,10 @@
+<?php
+/**
+ * front-page template
+ */
+?>
+
+
+
+
+

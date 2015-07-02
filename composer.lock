@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2fc76b8d026ce89dbebb67eb3dd87661",
+    "hash": "b33179c80bbe6516c4fef2ba1d7592f1",
     "packages": [
         {
             "name": "composer/installers",
@@ -244,6 +244,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-twitterbootstrap",
+            "version": "1.22",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/woocommerce-twitterbootstrap/",
+                "reference": "tags/1.22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-twitterbootstrap.1.22.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-twitterbootstrap/"
         }
     ],
     "packages-dev": [

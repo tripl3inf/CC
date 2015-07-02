@@ -1,1 +1,14 @@
+// template/page info -- DEV ONLY!
+.template_dev_info {
+  position: fixed !important;
+  bottom: 0;
+  p {
+    font-size: 10px;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+
 
