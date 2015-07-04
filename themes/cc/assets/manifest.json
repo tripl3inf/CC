@@ -6,41 +6,52 @@
       ],
       "main": true
     },
-
     "main.css": {
       "files": [
         "styles/main.scss"
       ],
       "main": true
     },
-
-
-    "frontpage.css": {
+    "fullpage.css": {
+      "bower": [
+        "fullpage.js"
+      ]
+    },
+    "fullpage.js": {
+      "bower": [
+        "fullpage.js"
+      ]
+    },
+    "dashboard.css": {
       "files": [
-        "styles/frontpage.scss"
+        "styles/dashboard.scss"
       ],
-      "bower": ["fullpage.js"]
+      "bower": [
+        "metisMenu",
+        "startbootstrap-sb-admin-2"
+      ]
     },
-    "frontpage.js": {
-      "bower": ["fullpage.js"]
+    "dashboard.js": {
+      "bower": [
+        "metisMenu",
+        "startbootstrap-sb-admin-2"
+      ]
     },
-
-
-
     "editor-style.css": {
       "files": [
         "styles/editor-style.scss"
       ]
     },
-
     "jquery.js": {
-      "bower": ["jquery"]
+      "bower": [
+        "jquery"
+      ]
     },
-
     "modernizr.js": {
-      "bower": ["modernizr"]
+      "bower": [
+        "modernizr"
+      ]
     }
-
   },
   "config": {
     "devUrl": "http://dev.couponcatapult.com"

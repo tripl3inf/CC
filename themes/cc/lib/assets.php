@@ -70,11 +70,13 @@ function assets() {
 	wp_enqueue_style( 'sage_css', asset_path( 'styles/main.css' ), false, null );
 
 	if ( is_front_page() ) {
-		wp_enqueue_style( 'frontpage_css', asset_path( 'styles/frontpage.css' ), false, null );
+		wp_enqueue_style( 'fullpage_css', asset_path( 'styles/fullpage.css' ), false, null );
 	}
 
-	//wp_enqueue_style( 'dash_css', asset_path( 'styles/dashboard.css' ), false, null );
 
+	if ( is_page_template( 'template-dashboard.php' )  ) {
+		wp_enqueue_style( 'dash_css', asset_path( 'styles/dashboard.css' ), false, null );
+	}
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -83,10 +85,12 @@ function assets() {
 	wp_enqueue_script( 'modernizr', asset_path( 'scripts/modernizr.js' ), [ ], null, true );
 
 	if ( is_front_page() ) {
-		wp_enqueue_script( 'frontpage_js', asset_path( 'scripts/frontpage.js' ), [ 'jquery' ], null, true );
+		wp_enqueue_script( 'fullpage_js', asset_path( 'scripts/fullpage.js' ), [ 'jquery' ], null, true );
 	}
 
-	//wp_enqueue_script( 'dash_js', asset_path( 'scripts/dashboard.js' ), [ 'jquery' ], null, true );
+	if ( is_page_template( 'template-dashboard.php' )  ) {
+		wp_enqueue_script( 'dash_js', asset_path( 'scripts/dashboard.js' ), [ 'jquery' ], null, true );
+	}
 
 	wp_enqueue_script( 'sage_js', asset_path( 'scripts/main.js' ), [ 'jquery' ], null, true );
 

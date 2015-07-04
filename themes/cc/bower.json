@@ -11,7 +11,8 @@
     "bootstrap-sass-official": "3.3.5",
     "fullpage.js": "~2.6.6",
     "fontawesome": "~4.3.0",
-    "metisMenu": "~2.0.2"
+    "metisMenu": "~2.0.2",
+    "startbootstrap-sb-admin-2": "~1.0.7"
   },
   "overrides": {
     "modernizr": {
@@ -39,13 +40,24 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
     },
+
     "fullpage.js": {
       "main": [
-        "jquery.fullPage.js",
-        "jquery.fullPage.css",
-        "vendors/jquery.easings.min.js",
-        "vendors/jquery.slimscroll.min.js"
+        "./jquery.fullPage.js",
+        "./jquery.fullPage.css",
+        "./vendors/jquery.easings.min.js",
+        "./vendors/jquery.slimscroll.min.js"
       ]
+    },
+
+
+    "startbootstrap-sb-admin-2": {
+      "main": [
+        "./dist/css/sb-admin-2.css",
+        "./dist/js/sb-admin-2.js"
+        ],
+      "dependencies": {}
     }
+
   }
 }
