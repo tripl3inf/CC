@@ -4,36 +4,43 @@
       "files": [
         "scripts/main.js"
       ],
-      "vendor": [
-        "scripts/plugins/ScrollToPlugin.js"
-      ],
       "main": true
     },
+
     "main.css": {
       "files": [
         "styles/main.scss"
       ],
       "main": true
     },
-    "frontpage-style.css": {
+
+
+    "frontpage.css": {
       "files": [
-        "styles/frontpage-style.scss"
-      ]
+        "styles/frontpage.scss"
+      ],
+      "bower": ["fullpage.js"]
     },
+    "frontpage.js": {
+      "bower": ["fullpage.js"]
+    },
+
+
+
     "editor-style.css": {
       "files": [
         "styles/editor-style.scss"
-      ],
-      "vendor": [
-        "../bower_components/fullpage.js/jquery.fullPage.scss"
       ]
     },
+
     "jquery.js": {
       "bower": ["jquery"]
     },
+
     "modernizr.js": {
       "bower": ["modernizr"]
     }
+
   },
   "config": {
     "devUrl": "http://dev.couponcatapult.com"

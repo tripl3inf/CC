@@ -9,9 +9,9 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
-    "startbootstrap-sb-admin-2": "~1.0.7",
-    "gsap": "~1.17.0",
-    "fullpage.js": "~2.6.6"
+    "fullpage.js": "~2.6.6",
+    "fontawesome": "~4.3.0",
+    "metisMenu": "~2.0.2"
   },
   "overrides": {
     "modernizr": {
@@ -42,8 +42,9 @@
     "fullpage.js": {
       "main": [
         "jquery.fullPage.js",
-        "./vendors/jquery.easings.min.js",
-        "./vendors/jquery.slimscroll.min.js"
+        "jquery.fullPage.css",
+        "vendors/jquery.easings.min.js",
+        "vendors/jquery.slimscroll.min.js"
       ]
     }
   }

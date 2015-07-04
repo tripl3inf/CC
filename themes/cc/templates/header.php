@@ -1,6 +1,8 @@
 <?php
-if ( ! is_page_template( 'template-dashboard.php' ) ) {
-	?>
+/**
+ **** Prospect-Side Header
+ */
+?>
 
 	<header class="banner" role="banner">
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -31,6 +33,3 @@ if ( ! is_page_template( 'template-dashboard.php' ) ) {
 		</nav>
 	</header>
 
-	<?php
-}
-?>

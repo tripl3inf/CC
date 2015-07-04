@@ -18,8 +18,10 @@ $sage_includes = [
 	'lib/assets.php',                // Scripts and stylesheets
 	'lib/titles.php',                // Page titles
 	'lib/extras.php',                // Custom functions
+	//'lib/DEV-ONLY.php',
 	'lib/woo-support.php',           // Add Woocommerce theme support
-	'lib/DEV-ONLY.php'
+	'lib/custom-post.php',           // Custom Post Types
+	'lib/coupon-creation.php'        // Coupon creator functions
 ];
 
 foreach ( $sage_includes as $file ) {
