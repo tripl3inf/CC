@@ -41,6 +41,26 @@ function setup() {
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
+
+
+/**
+ * Set permalink structure on theme activation -- /category/postname
+ */
+function set_permalink_structure(){
+	global $wp_rewrite;
+	$wp_rewrite->set_permalink_structure('/%category%/%postname%/');
+	$wp_rewrite->flush_rules();
+}
+add_action('after_switch_theme', __NAMESPACE__ . '\\set_permalink_structure');
+
+// then hide the menu item in admin
+//function remove_permalink_menu()
+//{
+//	remove_submenu_page( 'options-general.php', 'options-permalink.php' );
+//}
+//add_action('admin_init', __NAMESPACE__ . '\\remove_permalink_menu', 999);
+
+
 /**
  * Register sidebars
  */

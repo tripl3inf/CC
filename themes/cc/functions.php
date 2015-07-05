@@ -21,6 +21,7 @@ $sage_includes = [
 	'lib/DEV-ONLY.php',
 	'lib/woo-support.php',           // Add Woocommerce theme support
 	'lib/custom-post.php',           // Custom Post Types
+	'lib/dashboard.php',             // Dashboard functions
 	'lib/coupon-creation.php'        // Coupon creator functions
 ];
 
